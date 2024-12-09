@@ -16,6 +16,6 @@ with DAG('user_automation',
          schedule_interval = '@daily',
          catchup = False) as dag :
     streaming_task = PythonOperator(
-        task_id = 'stream_data_from_api'
+        task_id = 'stream_data_from_api',
         python_callable = stream_data
     )
